@@ -23,7 +23,7 @@ export function CaixaToken({ token, removerToken }) {
                 <Text style={styles.text}>{token}</Text>
             </Pressable>
             <Pressable onPress={handleRemove}>
-                <Ionicons name="trash" size={24} color="red" />
+                <Ionicons name="trash" size={24} color="white" />
             </Pressable>
         </Animated.View>
     );
@@ -36,12 +36,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
         marginVertical: 5,
-        backgroundColor: '#f0f0f0',
+        backgroundColor: '#000',
         borderRadius: 8,
     },
     text: {
         fontSize: 16,
         fontWeight: 'bold',
+        color: 'white',
     },
     tokenContainer: {
         flex: 1,
