@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Pressable, Text, StyleSheet, Animated, Clipboard } from 'react-native';
+import { Pressable, Text, StyleSheet, Animated, Clipboard, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 export function CaixaToken({ token, removerToken }) {
@@ -15,6 +15,7 @@ export function CaixaToken({ token, removerToken }) {
 
     function copyToClipboard() {
         Clipboard.setString(token);
+        Alert.alert("Copiado!", "O token foi copiado para a área de transferência.");
     }
 
     return (
