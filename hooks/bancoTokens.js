@@ -16,8 +16,10 @@ export default function Armazenamento() {
       let tokens = await obterItem(chave);
       tokens.push(valor);
       await AsyncStorage.setItem(chave, JSON.stringify(tokens));
+      return true;
     } catch (erro) {
       alert("Erro ao salvar item", erro);
+      return false;
     }
   }
 
