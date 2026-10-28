@@ -19,7 +19,9 @@ export function ModalTokens({ token, fechar }) {
 
   const { salvarItem } = Armazenamento();
   async function salvarToken() {
-    await salvarItem("@token", token);
+    const salvo = await salvarItem("@token", token);
+    if (!salvo) return;
+
     alert(`Token ${token} salvo com sucesso`);
     fechar();
   }
